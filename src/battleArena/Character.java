@@ -50,12 +50,19 @@ public abstract class Character {
 	 * @param points
 	 */
 	public void getDamage (int points) {
+		this.lifePoints -= points;
 		
 	}
 	
-	
-	public void attack (Character enemy) {
-		
+	/**
+	 * is called if a character attacks a other character
+	 * @param enemy
+	 */
+	public void attack (Character enemy, int points) {
+		if (enemy != null && points > 0) {
+			enemy.getDamage(points);
+			
+		}
 	}
 	
 }

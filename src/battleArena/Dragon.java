@@ -7,6 +7,9 @@ public class Dragon extends Character{
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	
+	public void isspecialAbilityActive () {
+		if(this.isSpecialAbilityDevice() == true) {
+			
+		}
+	}
 }
