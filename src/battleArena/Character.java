@@ -5,8 +5,6 @@ public abstract class Character {
 	private String name;
 	private double lifePoints;
 	private int attackStrength;
-	
-
 	private boolean specialAbilityDevice;
 	
 	
@@ -58,6 +56,6 @@ public abstract class Character {
 
 	public abstract void getDamage (int points);	
 	public abstract void attack (Character enemy);
-	public abstract void isSpecialAbilityactive();
-	public abstract void isSpecialAbilitydeactive();
+	public abstract void isSpecialAbilityActive();
+	public abstract void isSpecialAbilityDeactive();
 	}
