@@ -8,6 +8,7 @@ public abstract class Character {
 	private boolean specialAbilityDevice;
 	
 	
+	
 	public Character(String name) {
 		this.name = name;
 		this.lifePoints = 100;
