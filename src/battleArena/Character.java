@@ -4,6 +4,9 @@ public abstract class Character {
 
 	private String name;
 	private double lifePoints;
+	private int attackStrength;
+	
+
 	private boolean specialAbilityDevice;
 	
 	
@@ -32,7 +35,15 @@ public abstract class Character {
 	public void setLifePoints(double lifePoints) {
 		this.lifePoints = lifePoints;
 	}
+	
+	public int getAttackStrength() {
+		return attackStrength;
+	}
 
+
+	public void setAttackStrength(int attackStrength) {
+		this.attackStrength = attackStrength;
+	}
 
 	public boolean isSpecialAbilityDevice() {
 		return specialAbilityDevice;
@@ -44,25 +55,9 @@ public abstract class Character {
 	}
 	
 	
-	/**
-	 * is called when a character has been attacked
-	 * is deprived of health points as a result. 
-	 * @param points
-	 */
-	public void getDamage (int points) {
-		this.lifePoints -= points;
-		
+
+	public abstract void getDamage (int points);	
+	public abstract void attack (Character enemy);
+	public abstract void isSpecialAbilityactive();
+	public abstract void isSpecialAbilitydeactive();
 	}
-	
-	/**
-	 * is called if a character attacks a other character
-	 * @param enemy
-	 */
-	public void attack (Character enemy, int points) {
-		if (enemy != null && points > 0) {
-			enemy.getDamage(points);
-			
-		}
-	}
-	
-}

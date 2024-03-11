@@ -3,10 +3,12 @@ package battleArena;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Dragon extends Character{
+	
+	
 
 	public Dragon(String name) {
 		super(name);
-		// TODO Auto-generated constructor stub
+		this.setAttackStrength(ThreadLocalRandom.current().nextInt(20, 25+1));
 	}
 
 	public void isSpecialAbilityActive () {
