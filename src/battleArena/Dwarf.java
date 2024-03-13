@@ -27,8 +27,24 @@ public class Dwarf extends Character{
 		}
 	}
 	
-	public void isSpecialAbilityActive() {
-		
+	public boolean isSpecialAbility() {
+		int ran = ThreadLocalRandom.current().nextInt(0, 10 + 1);
+		if(this.getLifePoints()<= 50 && this.getLifePoints() > 20) {
+			if(ran > 0 && ran <3) {
+				return true;
+			}
+		}
+		else if(this.getLifePoints() <= 20 && this.getLifePoints() > 10) {
+				if(ran > 0 && ran < 5) {
+					return true;
+				}
+		}
+		else if(this.getLifePoints() <= 10) {
+			if(ran > 0 && ran < 7) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	
