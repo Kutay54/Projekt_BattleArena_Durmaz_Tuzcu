@@ -44,6 +44,13 @@ public class GameSystem {
 			while(name.equals(""));
 		}
 		
+		/**
+		 * Checking if the first character has been initialized
+		 * If thats the case the second player can now choose a character
+		 */
+		if(c1 != null) {
+			ChoiceOfCharacter += 20;
+		}
 		
 		/**
 		 * Depending on the selection, it creates an instances of character subclasses
@@ -52,7 +59,7 @@ public class GameSystem {
 		case 1: c1 = new Dragon(name);
 		break;
 		
-		case2: c1 = new Dwarf(name);
+		case 2: c1 = new Dwarf(name);
 		break;
 		
 		case 21: c2 = new Dragon(name);
@@ -61,12 +68,6 @@ public class GameSystem {
 		case 22: c2 = new Dwarf(name);
 		break;
 		}
-	}
 	
-	/**
-	 * Creating the BattleArena instance with the chosen characters and starting of the fight
-	 */
-	battleArena arena = new battleArena (c1, c2);
-	arena.fight(sc);
-	sc.close();
+	}
 }
