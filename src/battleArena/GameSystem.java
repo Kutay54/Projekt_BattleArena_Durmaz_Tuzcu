@@ -53,6 +53,7 @@ public class GameSystem {
 		}
 		
 		/**
+		 * 
 		 * Depending on the selection, it creates an instances of character subclasses
 		 */
 		switch(ChoiceOfCharacter) {
